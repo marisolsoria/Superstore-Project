@@ -1,0 +1,16 @@
+-- Order items by price
+SELECT price
+FROM superstore
+ORDER BY price;
+-- What is the sum stock quantity for each item?
+SELECT SUM(stock_quantity), item_name
+FROM superstore
+GROUP BY item_name;
+-- What is the average price for a stainless cookware set?
+SELECT AVG(price), item_name
+FROM superstore
+GROUP BY 'Kitchen Supplies';
+-- What is the stock quantity for stainless steel cookware set and air purifier?
+SELECT stock_quantity, item_name, category
+FROM superstore
+GROUP BY item_name= 'Air Purifier';
